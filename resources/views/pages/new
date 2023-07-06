@@ -1,0 +1,28 @@
+@foreach ($posts as $post)
+     <style>
+        .col-md-4 {
+            display: grid;
+            grid-gap: 60px;
+            grid-template-columns: 400px 400px 400px;
+        }
+     </style>
+     <div class="container"><br>
+       
+         <div class="grid-container">
+          <img src='storage/cover_images/{{$post->cover_image}}'>
+          <br> <br> 
+       
+       
+          <h4><a href="/post/{{$post->id}}">{{$post->title}}</a></h4>
+          <h6><small>written on {{$post->created_at}} by {{$post->user->name}}</small></h6>
+       
+         </div>
+            
+         
+
+     </div>
+       
+
+     </div> 
+     @endforeach 
+     
